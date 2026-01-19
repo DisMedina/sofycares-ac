@@ -24,7 +24,7 @@ export function useEmailSubscription() {
     return emailRegex.test(email);
   };
 
-  const subscribe = async (apiEndpoint: string) => {
+  const subscribe = async (_apiEndpoint: string) => {
     // Reset error state
     setState((prev) => ({ ...prev, error: null }));
 
