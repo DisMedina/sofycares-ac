@@ -1,6 +1,5 @@
 import { FadeInUp } from '@/components/AnimatedContainer/FadeInUp';
 import { CountdownTimer } from '@/components/CountdownTimer/CountdownTimer';
-import { EmailSubscriptionForm } from '@/components/EmailSubscription/EmailSubscriptionForm';
 import { MissionStatement } from '@/components/MissionStatement/MissionStatement';
 import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
 import { LAUNCH_DATE, ORGANIZATION_NAME, TAGLINE, COPYRIGHT_TEXT } from '@/config/constants';
@@ -35,15 +34,8 @@ function App() {
           </section>
         </FadeInUp>
 
-        {/* Email Subscription */}
-        <FadeInUp delay={450}>
-          <section className="mb-16">
-            <EmailSubscriptionForm />
-          </section>
-        </FadeInUp>
-
         {/* Social Links */}
-        <FadeInUp delay={600}>
+        <FadeInUp delay={450}>
           <section className="mb-12">
             <SocialLinks />
           </section>

@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa';
 import { SOCIAL_LINKS } from '@/config/constants';
 
 export const SocialLinks = () => {
@@ -9,9 +9,9 @@ export const SocialLinks = () => {
       url: SOCIAL_LINKS.facebook,
     },
     {
-      name: 'Twitter',
-      icon: FaTwitter,
-      url: SOCIAL_LINKS.twitter,
+      name: 'YouTube',
+      icon: FaYoutube,
+      url: SOCIAL_LINKS.youtube,
     },
     {
       name: 'Instagram',
