@@ -5,8 +5,8 @@ const Header = () => {
     <div className="w-full bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-semibold text-[#662d91]">
-          Sofy Cares
+        <Link to="/">
+          <img src="/logo/logo-tll.svg" alt="Sofy Cares" className="h-10" />
         </Link>
 
         {/* CTA */}

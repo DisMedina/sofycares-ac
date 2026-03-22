@@ -25,9 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           <div>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold">
-                Sofy <span className="text-[#e3aaaa]">Cares</span>
-              </h3>
+              <img src="/logo/logo-tll.svg" alt="Sofy Cares" className="h-10" />
             </div>
 
             <p className="text-white/80 mb-6 leading-relaxed">
