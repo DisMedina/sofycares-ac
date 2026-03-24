@@ -64,9 +64,9 @@ const DonationTypesSection = () => {
               The easiest way to provide support.{" "}
             </p>
 
-            <button className="bg-[#e3aaaa] text-[#662d91] font-semibold px-6 py-2 rounded-lg hover:opacity-90 transition">
+            <a href="https://www.paypal.com/ncp/payment/8XYQL4RHWPHGW" target="_blank" rel="noopener noreferrer" className="bg-[#e3aaaa] text-[#662d91] font-semibold px-6 py-2 rounded-lg hover:opacity-90 transition inline-block">
               Give Care
-            </button>
+            </a>
           </div>
 
           {/* CARD 3 */}

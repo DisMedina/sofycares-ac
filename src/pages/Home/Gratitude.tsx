@@ -66,9 +66,9 @@ export default function GratitudeSection() {
             </p>
 
             <div className="flex gap-4">
-              <button className="bg-[#FF6B35] hover:bg-[#e85c2c] transition px-6 py-3 rounded-xl font-semibold">
+              <a href="https://www.paypal.com/ncp/payment/8XYQL4RHWPHGW" target="_blank" rel="noopener noreferrer" className="bg-[#FF6B35] hover:bg-[#e85c2c] transition px-6 py-3 rounded-xl font-semibold inline-block">
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
         </div>

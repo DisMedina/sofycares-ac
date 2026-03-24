@@ -28,9 +28,9 @@ function Hero() {
             need it most. Together we can make a life filled with dignity.
           </p>
 
-          <button className="mt-8 bg-[#e3aaaa] text-[#662d91] font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition">
+          <a href="https://www.paypal.com/ncp/payment/8XYQL4RHWPHGW" target="_blank" rel="noopener noreferrer" className="mt-8 bg-[#e3aaaa] text-[#662d91] font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition inline-block">
             Give Care
-          </button>
+          </a>
         </div>
       </div>
     </section>
