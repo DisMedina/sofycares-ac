@@ -1,4 +1,8 @@
+import { useLang } from "../../i18n/LanguageContext";
+
 const DonationTypesSection = () => {
+  const { t } = useLang();
+
   return (
     <section
       className="relative w-full py-28"
@@ -15,16 +19,15 @@ const DonationTypesSection = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <p className="uppercase tracking-widest text-[#e3aaaa] mb-4">
-            Types of care
+            {t.donationTypes.tag}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Ways you can <span className="text-[#e3aaaa]">Help</span>
+            {t.donationTypes.heading} <span className="text-[#e3aaaa]">{t.donationTypes.headingHighlight}</span>
           </h2>
 
           <p className="mt-6 text-gray-200">
-            There are different ways to provide support and make a significant
-            difference in the lives of our people.
+            {t.donationTypes.description}
           </p>
         </div>
 
@@ -35,16 +38,16 @@ const DonationTypesSection = () => {
             <div className="rounded-xl overflow-hidden mb-6">
               <img
                 src="/images/SC_003.jpg"
-                alt="Campañas de apoyo"
+                alt={t.donationTypes.card1Alt}
                 className="w-full h-48 object-cover"
               />
             </div>
 
-            <h3 className="text-xl font-semibold mb-4">Support campaigns</h3>
+            <h3 className="text-xl font-semibold mb-4">{t.donationTypes.card1Title}</h3>
 
             <p className="text-gray-200 text-sm leading-relaxed">
-              Campaigns seeking specific help. <br />
-              Call: ##########
+              {t.donationTypes.card1Text} <br />
+              {t.donationTypes.card1Call}
             </p>
           </div>
 
@@ -53,19 +56,19 @@ const DonationTypesSection = () => {
             <div className="rounded-xl overflow-hidden mb-6">
               <img
                 src="/images/SC_002.jpg"
-                alt="Donaciones electrónicas"
+                alt={t.donationTypes.card2Alt}
                 className="w-full h-48 object-cover"
               />
             </div>
 
-            <h3 className="text-xl font-semibold mb-4">Digital donations</h3>
+            <h3 className="text-xl font-semibold mb-4">{t.donationTypes.card2Title}</h3>
 
             <p className="text-gray-200 text-sm leading-relaxed mb-6">
-              The easiest way to provide support.{" "}
+              {t.donationTypes.card2Text}
             </p>
 
             <a href="https://www.paypal.com/donate/?hosted_button_id=N9R2MUDNQEEAW" target="_blank" rel="noopener noreferrer" className="bg-[#e3aaaa] text-[#662d91] font-semibold px-6 py-2 rounded-lg hover:opacity-90 transition inline-block">
-              Give Care
+              {t.donationTypes.card2Cta}
             </a>
           </div>
 
@@ -74,16 +77,16 @@ const DonationTypesSection = () => {
             <div className="rounded-xl overflow-hidden mb-6">
               <img
                 src="/images/SC_001.jpg"
-                alt="Donaciones físicas"
+                alt={t.donationTypes.card3Alt}
                 className="w-full h-48 object-cover"
               />
             </div>
 
-            <h3 className="text-xl font-semibold mb-4">In-Kind Donations</h3>
+            <h3 className="text-xl font-semibold mb-4">{t.donationTypes.card3Title}</h3>
 
             <p className="text-gray-200 text-sm leading-relaxed">
-              We accept articles that may be useful to older adults. <br />
-              For more information, call: ##########.
+              {t.donationTypes.card3Text} <br />
+              {t.donationTypes.card3Call}
             </p>
           </div>
         </div>

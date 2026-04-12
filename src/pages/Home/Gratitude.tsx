@@ -1,48 +1,26 @@
 import { useState } from "react";
+import { useLang } from "../../i18n/LanguageContext";
 
-const gratitudeData = [
-  {
-    name: "Margaret Thompson",
-    age: 82,
-    image: "/images/SC_A.jpg",
-    message:
-      "Thanks to Sofy Cares, I wake up every day feeling safe, cared for, and surrounded by kindness. Your generosity truly gives us comfort and dignity.",
-  },
-  {
-    name: "Dorothy Williams",
-    age: 76,
-    image: "/images/SC_B.jpg",
-    message:
-      "The support we receive here is more than help — it is love. Every donation makes our days brighter and our hearts lighter.",
-  },
-  {
-    name: "Eleanor Hayes",
-    age: 88,
-    image: "/images/SC_C.jpg",
-    message:
-      "I never imagined I would find a second family at this stage of life. Thank you for giving us warmth, care, and hope.",
-  },
-  {
-    name: "Betty Anderson",
-    age: 79,
-    image: "/images/SC_D.jpg",
-    message:
-      "Your kindness provides us with meals, activities, and medical support. But most importantly, it gives us joy and companionship.",
-  },
+const testimonialImages = [
+  "/images/SC_A.jpg",
+  "/images/SC_B.jpg",
+  "/images/SC_C.jpg",
+  "/images/SC_D.jpg",
 ];
 
 export default function GratitudeSection() {
+  const { t } = useLang();
   const [index, setIndex] = useState(0);
 
   const next = () => {
-    setIndex((prev) => (prev + 1) % gratitudeData.length);
+    setIndex((prev) => (prev + 1) % t.gratitude.testimonials.length);
   };
 
   const prev = () => {
-    setIndex((prev) => (prev === 0 ? gratitudeData.length - 1 : prev - 1));
+    setIndex((prev) => (prev === 0 ? t.gratitude.testimonials.length - 1 : prev - 1));
   };
 
-  const current = gratitudeData[index];
+  const current = t.gratitude.testimonials[index];
 
   return (
     <section className="bg-[#F8F5F2] py-24 pb-32 px-6 lg:px-16">
@@ -51,23 +29,22 @@ export default function GratitudeSection() {
         <div className="relative">
           <img
             src="/images/SC_267.jpg"
-            alt="Senior residents smiling"
+            alt={t.gratitude.altImage}
             className="rounded-3xl shadow-lg w-full object-cover"
           />
 
           {/* Floating Card */}
           <div className="absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#662d91] text-white rounded-3xl p-8 w-[90%] shadow-2xl border-8 border-white">
             <h3 className="text-2xl font-semibold mb-4">
-              Your Generosity Brings Smiles Every Day
+              {t.gratitude.floatingHeading}
             </h3>
             <p className="text-sm opacity-90 mb-6">
-              Every contribution helps provide meals, healthcare, emotional
-              support, and daily activities for our beloved seniors.
+              {t.gratitude.floatingText}
             </p>
 
             <div className="flex gap-4">
               <a href="https://www.paypal.com/donate/?hosted_button_id=N9R2MUDNQEEAW" target="_blank" rel="noopener noreferrer" className="bg-[#FF6B35] hover:bg-[#e85c2c] transition px-6 py-3 rounded-xl font-semibold inline-block">
-                Donate Now
+                {t.gratitude.donateCta}
               </a>
             </div>
           </div>
@@ -76,24 +53,22 @@ export default function GratitudeSection() {
         {/* RIGHT COLUMN */}
         <div>
           <span className="text-[#2b143d] font-semibold uppercase tracking-wide">
-            Gratitude
+            {t.gratitude.tag}
           </span>
 
           <h2 className="text-4xl font-bold text-[#4A143C] mt-3 mb-6 leading-tight">
-            Heartfelt Words From Our Beloved Residents
+            {t.gratitude.heading}
           </h2>
 
           <p className="text-gray-600 mb-10 text-2xl">
-            At Sofy Cares, every donation becomes comfort, dignity, and joy.
-            Here are a few words of gratitude from the wonderful individuals
-            whose lives you help brighten every single day.
+            {t.gratitude.description}
           </p>
 
           {/* Carousel Card */}
           <div className="bg-white rounded-3xl p-8 shadow-lg transition-all duration-500">
             <div className="flex items-center gap-4 mb-6">
               <img
-                src={current.image}
+                src={testimonialImages[index]}
                 alt={current.name}
                 className="w-16 h-16 rounded-full object-cover"
               />
@@ -101,12 +76,12 @@ export default function GratitudeSection() {
                 <h4 className="text-lg font-semibold text-[#4A143C]">
                   {current.name}
                 </h4>
-                <p className="text-sm text-gray-500">{current.age} years old</p>
+                <p className="text-sm text-gray-500">{current.age} {t.gratitude.yearsOld}</p>
               </div>
             </div>
 
             <p className="text-gray-700 italic leading-relaxed">
-              “{current.message}”
+              "{current.message}"
             </p>
 
             {/* Carousel Controls */}
@@ -115,14 +90,14 @@ export default function GratitudeSection() {
                 onClick={prev}
                 className="text-sm text-[#662d91] font-medium hover:underline"
               >
-                ← Previous
+                {t.gratitude.prev}
               </button>
 
               <button
                 onClick={next}
                 className="text-sm text-[#662d91] font-medium hover:underline"
               >
-                Next →
+                {t.gratitude.next}
               </button>
             </div>
           </div>

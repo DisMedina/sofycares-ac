@@ -1,35 +1,9 @@
 import { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
-
-const faqs = [
-  {
-    question: "How are donations used at the retirement home?",
-    answer:
-      "All donations directly support the daily needs of our residents, including food, medical supplies, hygiene products, recreational activities, and facility maintenance. Every contribution is allocated responsibly to improve quality of life.",
-  },
-  {
-    question: "Do you provide financial transparency reports?",
-    answer:
-      "Yes. We maintain internal accountability records and provide financial summaries upon request. Transparency and responsible management are core values of our organization.",
-  },
-  {
-    question: "Can I choose how my donation is used?",
-    answer:
-      "Absolutely. Donors may specify if their contribution is intended for medical care, food programs, recreational activities, or infrastructure improvements.",
-  },
-  {
-    question: "Are electronic donations secure?",
-    answer:
-      "Yes. We use secure and encrypted payment gateways to ensure all electronic transactions are protected and confidential.",
-  },
-  {
-    question: "How can I verify the impact of my contribution?",
-    answer:
-      "We regularly share updates, photos, and reports about our programs. Donors are also welcome to contact us directly for more detailed information about ongoing initiatives.",
-  },
-];
+import { useLang } from "../../i18n/LanguageContext";
 
 const TransparencySection = () => {
+  const { t } = useLang();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -42,23 +16,21 @@ const TransparencySection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="uppercase tracking-widest text-[#e3aaaa] mb-4">
-            Transparency
+            {t.transparency.tag}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#662d91]">
-            Frequently Asked <span className="text-[#e3aaaa]">Questions</span>
+            {t.transparency.heading} <span className="text-[#e3aaaa]">{t.transparency.headingHighlight}</span>
           </h2>
 
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-            We believe transparency builds trust. Here are answers to the most
-            common questions about how donations are managed and used within our
-            retirement home.
+            {t.transparency.description}
           </p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="space-y-6">
-          {faqs.map((faq, index) => (
+          {t.transparency.faqs.map((faq, index) => (
             <div
               key={index}
               className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm"

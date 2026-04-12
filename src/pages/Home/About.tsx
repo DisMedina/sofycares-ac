@@ -1,7 +1,10 @@
 import { BiSolidDonateHeart } from "react-icons/bi";
 import { FaDonate } from "react-icons/fa";
+import { useLang } from "../../i18n/LanguageContext";
 
 const AboutSection = () => {
+  const { t } = useLang();
+
   return (
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
@@ -11,7 +14,7 @@ const AboutSection = () => {
           <div className="col-span-2 rounded-2xl overflow-hidden">
             <img
               src="/images/SC_245.jpg"
-              alt="Volunteers"
+              alt={t.about.altVolunteers}
               className="w-full h-[280px] object-cover"
             />
           </div>
@@ -20,7 +23,7 @@ const AboutSection = () => {
           <div className="rounded-2xl overflow-hidden">
             <img
               src="/images/SC_58.jpg"
-              alt="Charity"
+              alt={t.about.altCharity}
               className="w-full h-[220px] object-cover"
             />
           </div>
@@ -29,7 +32,7 @@ const AboutSection = () => {
           <div className="rounded-2xl overflow-hidden">
             <img
               src="/images/SC_149.jpg"
-              alt="Helping"
+              alt={t.about.altHelping}
               className="w-full h-[220px] object-cover"
             />
           </div>
@@ -37,7 +40,7 @@ const AboutSection = () => {
           {/* Floating Center Card */}
           <div
             className="
-                absolute top-1/2 left-1/2 
+                absolute top-1/2 left-1/2
                 -translate-x-1/2 -translate-y-1/2
                 bg-[#662d91] text-white
                 px-10 py-8
@@ -47,9 +50,9 @@ const AboutSection = () => {
                 ring-8 ring-white
             "
           >
-            <p className="text-4xl font-bold">15+</p>
+            <p className="text-4xl font-bold">{t.about.yearsCount}</p>
             <p className="text-sm uppercase tracking-widest mt-2">
-              Years Giving Our Best
+              {t.about.yearsLabel}
             </p>
           </div>
         </div>
@@ -57,20 +60,16 @@ const AboutSection = () => {
         {/* RIGHT COLUMN - CONTENT */}
         <div>
           <p className="uppercase tracking-widest text-[#e3aaaa] mb-4">
-            Introduction To Us
+            {t.about.tag}
           </p>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#662d91] leading-tight">
-            United In Compassion for Better{" "}
-            <span className="text-[#e3aaaa]">Care!!</span>
+            {t.about.heading}{" "}
+            <span className="text-[#e3aaaa]">{t.about.headingHighlight}</span>
           </h2>
 
           <p className="mt-6 text-gray-600 leading-relaxed">
-            Supporting Sofy Cares is much more than making a donation: it means
-            transforming the lives of older adults who deserve to live this
-            stage with dignity, respect, and compassion. Every contribution
-            helps provide medical care, proper nutrition, safe spaces, and
-            activities that strengthen their physical and emotional well-being.
+            {t.about.description}
           </p>
 
           {/* Features */}
@@ -82,9 +81,9 @@ const AboutSection = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-lg text-[#662d91]">
-                  Start Helping
+                  {t.about.feature1Title}
                 </h4>
-                <p className="text-gray-600 text-sm">It begins with you.</p>
+                <p className="text-gray-600 text-sm">{t.about.feature1Text}</p>
               </div>
             </div>
 
@@ -95,10 +94,10 @@ const AboutSection = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-lg text-[#662d91]">
-                  Make Donation
+                  {t.about.feature2Title}
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Give hope. Give comfort. Give today.
+                  {t.about.feature2Text}
                 </p>
               </div>
             </div>
@@ -108,15 +107,15 @@ const AboutSection = () => {
           <ul className="mt-8 space-y-3 text-gray-700">
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#662d91] rounded-full"></span>
-              Support activities that brighten their days.
+              {t.about.bullet1}
             </li>
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#662d91] rounded-full"></span>
-              Your generosity changes lives today and tomorrow.
+              {t.about.bullet2}
             </li>
             <li className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#662d91] rounded-full"></span>
-              Give seniors the respect and comfort they deserve.
+              {t.about.bullet3}
             </li>
           </ul>
 
@@ -127,7 +126,7 @@ const AboutSection = () => {
             rel="noopener noreferrer"
             className="inline-block mt-10 bg-[#662d91] text-white px-8 py-3 rounded-lg hover:opacity-90 transition"
           >
-            MORE ABOUT US
+            {t.about.cta}
           </a>
         </div>
       </div>

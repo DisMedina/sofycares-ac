@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { useLang } from "../i18n/LanguageContext";
 
 const socialLinks = [
   {
@@ -19,18 +20,19 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const { t } = useLang();
+
   return (
     <footer className="bg-[#662d91] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           <div>
             <div className="mb-6">
-              <img src="/logo/logo-tll.svg" alt="Sofy Cares" className="h-10" />
+              <img src="/logo/logo-tll.svg" alt={t.footer.logoAlt} className="h-10" />
             </div>
 
             <p className="text-white/80 mb-6 leading-relaxed">
-              We provide personal care and professional companionship services
-              with the love and attention your family deserves.
+              {t.footer.description}
             </p>
 
             <a
@@ -39,7 +41,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-block bg-[#e3aaaa] text-[#662d91] font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Visit Official Website
+              {t.footer.visitWebsite}
             </a>
 
             <div className="flex space-x-4 mt-8">
@@ -62,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact</h4>
+            <h4 className="text-lg font-semibold mb-6">{t.footer.contactHeading}</h4>
 
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -142,17 +144,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Mission</h4>
+            <h4 className="text-lg font-semibold mb-6">{t.footer.missionHeading}</h4>
 
             <p className="text-[#e3aaaa] font-medium mb-2">
-              Compassion With Purpose
+              {t.footer.missionSubhead}
             </p>
 
             <p className="text-white/80 text-sm leading-relaxed">
-              We are dedicated to providing dignity, respect, and personalized
-              care to every resident. Our mission is to create a safe, loving
-              environment where older adults feel valued, supported, and at
-              home.
+              {t.footer.missionText}
             </p>
           </div>
         </div>
@@ -162,7 +161,7 @@ export default function Footer() {
       <div className="border-t border-white/10 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
           <p className="text-white/60 text-sm">
-            © {new Date().getFullYear()} Sofy Cares. All rights reserved.
+            © {new Date().getFullYear()} {t.footer.copyright}
           </p>
         </div>
       </div>
