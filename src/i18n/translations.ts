@@ -43,7 +43,6 @@ export const translations: Record<string, TranslationSchema> = {
         "There are different ways to provide support and make a significant difference in the lives of our people.",
       card1Title: "Support campaigns",
       card1Text: "Campaigns seeking specific help.",
-      card1Call: "Call: ##########",
       card1Alt: "Support campaigns",
       card2Title: "Digital donations",
       card2Text: "The easiest way to provide support.",
@@ -51,7 +50,6 @@ export const translations: Record<string, TranslationSchema> = {
       card2Cta: "Give Care",
       card3Title: "In-Kind Donations",
       card3Text: "We accept articles that may be useful to older adults.",
-      card3Call: "For more information, call: ##########.",
       card3Alt: "In-kind donations",
     },
     gratitude: {
@@ -183,7 +181,6 @@ export const translations: Record<string, TranslationSchema> = {
         "Existen diferentes formas de brindar apoyo y marcar una diferencia significativa en la vida de nuestra gente.",
       card1Title: "Campañas de apoyo",
       card1Text: "Campañas que buscan ayuda específica.",
-      card1Call: "Llama: ##########",
       card1Alt: "Campañas de apoyo",
       card2Title: "Donaciones digitales",
       card2Text: "La forma más fácil de brindar apoyo.",
@@ -191,7 +188,6 @@ export const translations: Record<string, TranslationSchema> = {
       card2Cta: "Donar",
       card3Title: "Donaciones en Especie",
       card3Text: "Aceptamos artículos que puedan ser útiles para adultos mayores.",
-      card3Call: "Para más información, llama: ##########.",
       card3Alt: "Donaciones físicas",
     },
     gratitude: {

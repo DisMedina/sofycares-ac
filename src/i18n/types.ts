@@ -50,7 +50,6 @@ export interface TranslationSchema {
     description: string;
     card1Title: string;
     card1Text: string;
-    card1Call: string;
     card1Alt: string;
     card2Title: string;
     card2Text: string;
@@ -58,7 +57,6 @@ export interface TranslationSchema {
     card2Cta: string;
     card3Title: string;
     card3Text: string;
-    card3Call: string;
     card3Alt: string;
   };
   gratitude: {

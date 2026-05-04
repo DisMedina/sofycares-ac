@@ -134,10 +134,10 @@ export default function Footer() {
                 </svg>
 
                 <a
-                  href="mailto:sofycaressma@gmail.com"
+                  href="mailto:acsofycares@gmail.com"
                   className="text-white/80 hover:text-white transition-colors duration-200"
                 >
-                  sofycaressma@gmail.com
+                  acsofycares@gmail.com
                 </a>
               </div>
             </div>

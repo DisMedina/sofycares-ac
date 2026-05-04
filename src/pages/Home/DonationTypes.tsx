@@ -46,8 +46,7 @@ const DonationTypesSection = () => {
             <h3 className="text-xl font-semibold mb-4">{t.donationTypes.card1Title}</h3>
 
             <p className="text-gray-200 text-sm leading-relaxed">
-              {t.donationTypes.card1Text} <br />
-              {t.donationTypes.card1Call}
+              {t.donationTypes.card1Text}
             </p>
           </div>
 
@@ -85,8 +84,7 @@ const DonationTypesSection = () => {
             <h3 className="text-xl font-semibold mb-4">{t.donationTypes.card3Title}</h3>
 
             <p className="text-gray-200 text-sm leading-relaxed">
-              {t.donationTypes.card3Text} <br />
-              {t.donationTypes.card3Call}
+              {t.donationTypes.card3Text}
             </p>
           </div>
         </div>
